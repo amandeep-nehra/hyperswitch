@@ -161,6 +161,7 @@ impl ConnectorData {
     ) -> CustomResult<BoxedConnector, errors::ApiErrorResponse> {
         match connector_name {
             "aci" => Ok(Box::new(&connector::Aci)),
+			"forte" => Ok(Box::new(&connector::Forte)),
             "adyen" => Ok(Box::new(&connector::Adyen)),
             "airwallex" => Ok(Box::new(&connector::Airwallex)),
             "applepay" => Ok(Box::new(&connector::Applepay)),
